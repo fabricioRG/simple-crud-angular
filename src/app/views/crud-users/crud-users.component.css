@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+body {
+    background-color: #3e94ec;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #71e753;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+::ng-deep .mat-card{
+
+    border: 1px solid #005bd1 !important;
+}
