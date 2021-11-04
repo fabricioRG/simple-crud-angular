@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
+import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class CrudUsersComponent implements OnInit {
   isUserSelected = false;
   selectedUser: User = {};
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -31,15 +32,23 @@ export class CrudUsersComponent implements OnInit {
   }
 
   findUsersByEmail(email: string){
-    this.userService.findUsersByEmail(email).subscribe((response) => {
-      this.users = response;
-    });
+    if(email){
+      this.userService.findUsersByEmail(email).subscribe((response) => {
+        this.users = response;
+      });
+    } else {
+      this.getUsers();
+    }
   }
 
   findUsersByUsername(username: string){
-    this.userService.findUsersByUsername(username).subscribe((response) => {
-      this.users = response;
-    });
+    if(username){
+      this.userService.findUsersByUsername(username).subscribe((response) => {
+        this.users = response;
+      });
+    } else {
+      this.getUsers();
+    }
   }
 
   createUser(user: User){
@@ -120,6 +129,10 @@ export class CrudUsersComponent implements OnInit {
     this.userNameValue = '';
     this.userEmailValue = '';
     this.userPhoneValue = 0;
+  }
+
+  signOut() {
+    this.authService.logout();
   }
 
 }

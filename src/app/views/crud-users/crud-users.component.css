@@ -1,15 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-body {
-    background-color: #3e94ec;
-    font-family: "Roboto", helvetica, arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-}
 
 table {
     width: 100%;
-    border: 1px solid #71e753;
+    border: 1px solid #8D99AE;
 }
 
 .mat-form-field {
@@ -23,5 +16,5 @@ table {
 
 ::ng-deep .mat-card{
 
-    border: 1px solid #005bd1 !important;
+    border: 1px solid #8D99AE !important;
 }

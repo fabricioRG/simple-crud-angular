@@ -1,0 +1,32 @@
+<div class="form-container">
+    <div>
+        <h1 style="text-align: center;">Log In</h1>
+    </div>
+    <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
+        <div class="row d-flex justify-content-center">
+            <mat-card>
+                <mat-card-content>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-11">
+                            <mat-form-field class="full-width">
+                                <mat-label>Email address</mat-label>
+                                <input matInput type="text" placeholder="Email address" (ngModel)="email" name="email" required>
+                            </mat-form-field>
+                            <div class="col-md-11">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" placeholder="Password" (ngModel)="password" name="password" required>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <button type="submit" [disabled]="!formData.valid" class="auth-btn btn">Log in</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </form>
+    <a routerLink="/signup" class="create-account-txt">No account? <strong>Create one
+            here</strong></a>
+</div>

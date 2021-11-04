@@ -1,5 +1,8 @@
-<nav class="navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="/" style="padding: 10px;"> Simple Users CRUD </a>
+<nav class="navbar navbar-light" style="background-color: #DD6031;">
+    <a class="navbar-brand" href="/#/crud-users" style="padding: 15px;color: #fff;"> Simple Users CRUD </a>
+    <form class="form-inline">
+        <button class="btn" style="border-color: #fff; color: #fff; margin-right: 20px;" (click)="signOut()">Sign Out</button>
+    </form>
 </nav>
 <br/>
 <div class="px-5">
@@ -50,14 +53,14 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
                     <mat-form-field appearance="standard">
-                        <mat-label>Search by email</mat-label>
-                        <input matInput (keyup)="applyFilterByEmail($event)" placeholder="Ex. mark@email.com" #input>
+                        <mat-label>Search by username</mat-label>
+                        <input matInput (keyup)="applyFilterByUsername($event)" placeholder="Ex. mark" #input>
                     </mat-form-field>
                 </div>
                 <div class="col-md-6">
                     <mat-form-field appearance="standard">
-                        <mat-label>Search by username</mat-label>
-                        <input matInput (keyup)="applyFilterByUsername($event)" placeholder="Ex. mark" #input>
+                        <mat-label>Search by email</mat-label>
+                        <input matInput (keyup)="applyFilterByEmail($event)" placeholder="Ex. mark@email.com" #input>
                     </mat-form-field>
                 </div>
             </div>
