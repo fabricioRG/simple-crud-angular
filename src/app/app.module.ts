@@ -46,17 +46,6 @@ const rutas: Routes = [
   }
 ]
 
-const firebaseConfig = {
-
-  apiKey: "AIzaSyBg_FSwSi2gaVNUHZOEBDW3vcIQG5uU2ms",
-  authDomain: "backend-3954a.firebaseapp.com",
-  projectId: "backend-3954a",
-  storageBucket: "backend-3954a.appspot.com",
-  messagingSenderId: "77049089483",
-  appId: "1:77049089483:web:65e78fdc61257929e57a4e"
-
-};
-
 
 @NgModule({
   declarations: [
